@@ -1,7 +1,7 @@
 import { Command } from 'commander';
 import { existsSync } from 'fs';
 import * as path from 'path';
-import * as prompts from 'prompts';
+import prompts from 'prompts';
 
 import { installComponent } from '@cli/commands/add/component-installer.js';
 import { selectComponents } from '@cli/commands/add/component-selector.js';
