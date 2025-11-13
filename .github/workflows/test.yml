@@ -44,6 +44,6 @@ jobs:
         run: npm run build:cli
       - name: Publish to Github Packages
         if: success()
-        run: npm publish packages/cli/dist --access public
+        run: cd packages/cli/dist && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
