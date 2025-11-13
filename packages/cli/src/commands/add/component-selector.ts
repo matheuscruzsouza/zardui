@@ -1,4 +1,4 @@
-import * as prompts from 'prompts';
+import prompts from 'prompts';
 
 import { getAllComponentNames } from '@cli/core/registry/index.js';
 import { logger } from '@cli/utils/logger.js';

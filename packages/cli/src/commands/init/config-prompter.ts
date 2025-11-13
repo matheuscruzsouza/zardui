@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { existsSync } from 'fs';
 import { readFile } from 'node:fs/promises';
 import * as path from 'path';
-import * as prompts from 'prompts';
+import prompts from 'prompts';
 import { z } from 'zod';
 
 import { Config } from '@cli/utils/config.js';

@@ -3,7 +3,7 @@ import { Command } from 'commander';
 import { existsSync } from 'fs';
 import { writeFile } from 'node:fs/promises';
 import * as path from 'path';
-import * as prompts from 'prompts';
+import prompts from 'prompts';
 
 import { promptForConfig } from '@cli/commands/init/config-prompter.js';
 import { installDependencies } from '@cli/commands/init/dependencies.js';
