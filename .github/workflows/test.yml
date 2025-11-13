@@ -1,0 +1,49 @@
+name: Teste de deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['master']
+    paths:
+      - libs/zard/**
+
+jobs:
+  update_doc:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com/
+          scope: "@matheuscruzsouza"
+      - name: Install NPM Packages
+        run: npm ci --registry=https://registry.npmjs.org/
+      - name: Build
+        run: npm run build
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/apps/web/browser
+
+  build_cli:
+    runs_on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com/
+          scope: "@matheuscruzsouza"
+      - name: Install NPM Packages
+        run: npm ci --registry=https://registry.npmjs.org/
+      - name: Build
+        run: npm run build:cli
+      - name: Publish to Github Packages
+        if: success()
+        run: npm publish packages/cli/dist --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
