@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var o=[{path:"",pathMatch:"full",loadComponent:()=>import("./chunk-3VDJL63F.js").then(e=>e.BlocksPage)},{path:":category",loadComponent:()=>import("./chunk-3VDJL63F.js").then(e=>e.BlocksPage)}];export{o as BLOCKS_ROUTES};

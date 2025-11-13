@@ -1,0 +1,18 @@
+```angular-ts showLineNumbers copyButton
+import { Component } from '@angular/core';
+
+import { ZardButtonComponent } from '../button.component';
+
+@Component({
+  selector: 'z-demo-button-shape',
+  standalone: true,
+  imports: [ZardButtonComponent],
+  template: `
+    <button z-button>Default</button>
+    <button z-button zShape="circle">Circle</button>
+    <button z-button zShape="square">Square</button>
+  `,
+})
+export class ZardDemoButtonShapeComponent {}
+
+```

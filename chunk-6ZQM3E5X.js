@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var n=[{path:"",loadComponent:()=>import("./chunk-KDDRDJCM.js").then(e=>e.ComponentsListPage)},{path:":componentName",loadComponent:()=>import("./chunk-AQJKTOSD.js").then(e=>e.ComponentPage)}];export{n as COMPONENTS_ROUTES};

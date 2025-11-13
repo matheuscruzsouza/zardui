@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var n=[{path:"",loadComponent:()=>import("./chunk-6IEM7HVW.js").then(e=>e.EnviromentsPage)},{path:":envName",loadChildren:()=>import("./chunk-H7W6WYSH.js").then(e=>e.INSTALL_ROUTES)}];export{n as ENVIRONMENTS_ROUTES};
