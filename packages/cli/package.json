@@ -1,5 +1,5 @@
 {
-  "name": "@ngzard/ui",
+  "name": "@matheuscruzsouza/ui",
   "version": "1.0.0-beta.25",
   "description": "An alternative to shadcn/ui for angular",
   "type": "module",
@@ -26,7 +26,8 @@
   "homepage": "https://zardui.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/matheuscruzsouza/zardui.git"
+    "url": "git+https://github.com/matheuscruzsouza/zardui.git",
+    "directory": "packages/cli"
   },
   "bugs": {
     "url": "https://github.com/zard-ui/zardui/issues"
