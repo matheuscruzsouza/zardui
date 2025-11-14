@@ -19,7 +19,7 @@
     "release": "npx nx release",
     "release:dry-run": "npx nx release --dry-run",
     "serve:ssr": "node dist/apps/web/server/server.mjs",
-    "build:gh-pages": "node apps/web/update-routes.mjs && npx nx run web:build --configuration=production --base-href=/zardui/ && mv dist/apps/web/browser/index.csr.html dist/apps/web/browser/index.html"
+    "build:gh-pages": "node apps/web/update-routes.mjs && npx nx run web:build --configuration=production && sed 's|<base href=\"/\">|<base href=\"/zardui/\"/>|g' dist/apps/web/browser/index.html > dist/apps/web/browser/index.tmp.html; mv dist/apps/web/browser/index.tmp.html dist/apps/web/browser/index.html"
   },
   "engines": {
     "node": "22 || 20"
